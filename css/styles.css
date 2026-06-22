@@ -87,6 +87,15 @@ a { color: var(--blue-light); text-decoration: none; }
   transition: color 0.18s ease;
 }
 .nav__menu a:hover { color: var(--text); }
+.nav__menu a.is-active { color: var(--text); }
+.nav__menu a.is-active::after {
+  content: "";
+  display: block;
+  height: 2px;
+  margin-top: 4px;
+  border-radius: 2px;
+  background: linear-gradient(90deg, var(--blue), var(--teal));
+}
 
 .nav__toggle {
   display: none;
@@ -360,3 +369,147 @@ a { color: var(--blue-light); text-decoration: none; }
 
   .tech-card img { height: 220px; }
 }
+
+/* ============================ PAGE HERO (sub-pages) ============================ */
+.page-hero {
+  text-align: center;
+  padding: clamp(56px, 11vw, 110px) 0 clamp(40px, 7vw, 70px);
+  background:
+    radial-gradient(900px 420px at 50% -10%, rgba(56, 96, 235, 0.26), transparent 60%),
+    radial-gradient(620px 360px at 82% 0%, rgba(50, 186, 154, 0.14), transparent 55%),
+    var(--bg);
+  border-bottom: 1px solid var(--border);
+}
+.page-hero__title {
+  margin: 0;
+  font-size: clamp(2rem, 6vw, 3.2rem);
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  background: linear-gradient(90deg, var(--blue-light), var(--teal));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+.page-hero__sub {
+  margin: 12px auto 0;
+  max-width: 620px;
+  color: var(--muted);
+  font-size: clamp(1rem, 2.4vw, 1.25rem);
+  font-weight: 500;
+}
+
+.section__cta { margin-top: 36px; }
+
+/* ============================ HOME NAV CARDS ============================ */
+.home-cards {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+.home-card {
+  display: block;
+  padding: 30px 28px;
+  border-radius: var(--radius);
+  background: var(--panel);
+  border: 1px solid var(--border);
+  color: var(--text);
+  transition: transform 0.18s ease, border-color 0.2s ease, background 0.2s ease;
+}
+.home-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--blue-light);
+  background: linear-gradient(135deg, rgba(56,96,235,0.12), rgba(50,186,154,0.09));
+}
+.home-card__title { margin: 0 0 10px; font-size: 1.4rem; }
+.home-card__text  { margin: 0 0 16px; color: var(--muted); }
+.home-card__link  { color: var(--blue-light); font-weight: 600; font-size: 0.95rem; }
+
+/* ============================ CONNECT PAGE ============================ */
+.connect-layout {
+  display: grid;
+  grid-template-columns: 1fr 1.4fr;
+  gap: 40px;
+  align-items: start;
+}
+.contact-methods__title,
+.contact-form__title {
+  font-size: 1.4rem;
+  margin: 0 0 20px;
+}
+.contact-link {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 16px 18px;
+  margin-bottom: 14px;
+  border-radius: var(--radius);
+  background: var(--panel);
+  border: 1px solid var(--border);
+  color: var(--text);
+  font-weight: 500;
+  transition: transform 0.18s ease, border-color 0.2s ease;
+}
+.contact-link:hover { transform: translateY(-2px); border-color: var(--blue-light); }
+.contact-link svg { color: var(--blue-light); flex-shrink: 0; }
+
+/* Contact form */
+.contact-form-wrap {
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 30px 28px;
+  box-shadow: var(--shadow);
+}
+.form-row { margin-bottom: 18px; }
+.form-row label {
+  display: block;
+  margin-bottom: 7px;
+  font-weight: 600;
+  font-size: 0.92rem;
+  color: var(--text);
+}
+.form-row input,
+.form-row textarea {
+  width: 100%;
+  padding: 12px 14px;
+  border-radius: 10px;
+  border: 1px solid var(--border);
+  background: rgba(255, 255, 255, 0.04);
+  color: var(--text);
+  font: inherit;
+  resize: vertical;
+  transition: border-color 0.2s ease, background 0.2s ease;
+}
+.form-row input::placeholder,
+.form-row textarea::placeholder { color: var(--muted-2); }
+.form-row input:focus,
+.form-row textarea:focus {
+  outline: none;
+  border-color: var(--blue-light);
+  background: rgba(255, 255, 255, 0.06);
+}
+.form-submit { width: 100%; cursor: pointer; }
+.form-submit:disabled { opacity: 0.6; cursor: default; transform: none; }
+
+/* Honeypot: hidden from real users, bots fill it and get rejected */
+.hp-field {
+  position: absolute !important;
+  left: -9999px;
+  opacity: 0;
+  height: 0;
+  width: 0;
+}
+
+.form-status {
+  margin: 16px 0 0;
+  font-size: 0.95rem;
+  min-height: 1.2em;
+}
+.form-status--success { color: var(--teal); }
+.form-status--error   { color: #ff8b8b; }
+
+@media (max-width: 760px) {
+  .home-cards { grid-template-columns: 1fr; }
+  .connect-layout { grid-template-columns: 1fr; gap: 28px; }
+}
+

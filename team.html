@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Team — LeviSens</title>
+  <meta name="description" content="Meet the LeviSens team — physicists dedicated to making the seemingly undetectable measurable." />
+
+  <link rel="icon" type="image/png" href="assets/images/logo.png" />
+  <link rel="apple-touch-icon" href="assets/images/logo.png" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" />
+
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <nav class="nav container">
+      <a class="nav__brand" href="index.html">
+        <img src="assets/images/logo.png" alt="LeviSens logo" class="nav__logo" />
+        <span class="nav__name">LEVISENS</span>
+      </a>
+      <button class="nav__toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="nav-menu">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav__menu" id="nav-menu">
+        <li><a href="about.html">About</a></li>
+        <li><a href="technology.html">Technology</a></li>
+        <li><a href="team.html" class="is-active" aria-current="page">Team</a></li>
+        <li><a href="connect.html">Connect</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="page-hero">
+      <div class="container">
+        <h1 class="page-hero__title">Team</h1>
+        <p class="page-hero__sub">Making the seemingly undetectable measurable</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container section__inner">
+        <div class="team">
+          <article class="team-card">
+            <div class="team-card__avatar" aria-hidden="true">AG</div>
+            <h2 class="team-card__name">Alexey Grinin</h2>
+            <p class="team-card__bio">
+              I am a physicist dedicated to translating complex scientific
+              knowledge into real-world applications. Throughout my PhD, industry
+              experience, and postdoctoral fellowship, I have a track record of
+              solving complex scientific problems and delivering results.
+            </p>
+          </article>
+
+          <article class="team-card">
+            <div class="team-card__avatar" aria-hidden="true">AG</div>
+            <h2 class="team-card__name">Andrew Geraci</h2>
+            <p class="team-card__bio">
+              The guiding principle of my career as a physics professor has been
+              making the seemingly undetectable measurable. I am thrilled to guide
+              our team through the technological challenges of commercializing
+              Quantum Optomechanics.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; <span class="year"></span> LeviSens. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

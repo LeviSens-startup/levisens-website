@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Connect — LeviSens</title>
+  <meta name="description" content="Connect with LeviSens — email us, follow on LinkedIn, or send a message directly." />
+
+  <link rel="icon" type="image/png" href="assets/images/logo.png" />
+  <link rel="apple-touch-icon" href="assets/images/logo.png" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" />
+
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <nav class="nav container">
+      <a class="nav__brand" href="index.html">
+        <img src="assets/images/logo.png" alt="LeviSens logo" class="nav__logo" />
+        <span class="nav__name">LEVISENS</span>
+      </a>
+      <button class="nav__toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="nav-menu">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav__menu" id="nav-menu">
+        <li><a href="about.html">About</a></li>
+        <li><a href="technology.html">Technology</a></li>
+        <li><a href="team.html">Team</a></li>
+        <li><a href="connect.html" class="is-active" aria-current="page">Connect</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="page-hero">
+      <div class="container">
+        <h1 class="page-hero__title">Connect</h1>
+        <p class="page-hero__sub">Help us grow &mdash; let&rsquo;s talk</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container connect-layout">
+        <!-- Direct contact details -->
+        <div class="contact-methods">
+          <h2 class="contact-methods__title">Reach us directly</h2>
+
+          <a class="contact-link" href="mailto:connect@levisens.tech">
+            <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true">
+              <path d="M4 4h16a1 1 0 0 1 1 1v14a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V5a1 1 0 0 1 1-1z" fill="none" stroke="currentColor" stroke-width="1.7"/>
+              <path d="M3.5 5.5l8.5 7 8.5-7" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/>
+            </svg>
+            <span>connect@levisens.tech</span>
+          </a>
+
+          <a class="contact-link" href="https://www.linkedin.com/company/levisens" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true">
+              <path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9h4v12H3zM9 9h3.8v1.7h.05c.53-1 1.83-2.05 3.77-2.05 4.03 0 4.78 2.65 4.78 6.1V21h-4v-5.4c0-1.29-.02-2.95-1.8-2.95-1.8 0-2.08 1.4-2.08 2.85V21H9z" fill="currentColor"/>
+            </svg>
+            <span>LinkedIn &mdash; /company/levisens</span>
+          </a>
+        </div>
+
+        <!-- Contact form -->
+        <div class="contact-form-wrap">
+          <h2 class="contact-form__title">Write to us</h2>
+          <form id="contact-form" class="contact-form" action="https://api.web3forms.com/submit" method="POST">
+            <!-- TODO: replace with your free Web3Forms access key from https://web3forms.com (sends to connect@levisens.tech) -->
+            <input type="hidden" name="access_key" value="REPLACE_WITH_WEB3FORMS_ACCESS_KEY" />
+            <input type="hidden" name="subject" value="New message from levisens.tech contact form" />
+            <input type="hidden" name="from_name" value="LeviSens Website" />
+            <!-- Honeypot anti-spam field (kept hidden from humans) -->
+            <input type="checkbox" name="botcheck" class="hp-field" tabindex="-1" autocomplete="off" />
+
+            <div class="form-row">
+              <label for="name">Name</label>
+              <input type="text" id="name" name="name" required autocomplete="name" placeholder="Your name" />
+            </div>
+            <div class="form-row">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" required autocomplete="email" placeholder="you@example.com" />
+            </div>
+            <div class="form-row">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" rows="5" required placeholder="How can we help?"></textarea>
+            </div>
+
+            <button type="submit" class="btn btn--primary form-submit">Send message</button>
+            <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; <span class="year"></span> LeviSens. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Technology — LeviSens</title>
+  <meta name="description" content="At the heart of LeviSens are optically levitated nanoparticles cooled toward the quantum ground state — contact-free, quantum-limited sensing." />
+
+  <link rel="icon" type="image/png" href="assets/images/logo.png" />
+  <link rel="apple-touch-icon" href="assets/images/logo.png" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" />
+
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <nav class="nav container">
+      <a class="nav__brand" href="index.html">
+        <img src="assets/images/logo.png" alt="LeviSens logo" class="nav__logo" />
+        <span class="nav__name">LEVISENS</span>
+      </a>
+      <button class="nav__toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="nav-menu">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav__menu" id="nav-menu">
+        <li><a href="about.html">About</a></li>
+        <li><a href="technology.html" class="is-active" aria-current="page">Technology</a></li>
+        <li><a href="team.html">Team</a></li>
+        <li><a href="connect.html">Connect</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="page-hero">
+      <div class="container">
+        <h1 class="page-hero__title">Technology</h1>
+        <p class="page-hero__sub">Levitated quantum optomechanics</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container section__inner">
+        <p class="lead">
+          At the heart of our platform are optically levitated nanoparticles &mdash;
+          masses suspended in vacuum and cooled toward the quantum ground state.
+          Free from mechanical contact, these sensors reach exquisite sensitivity
+          to force, acceleration, and field, opening measurement regimes that
+          conventional probes cannot reach.
+        </p>
+
+        <div class="tech-gallery">
+          <figure class="tech-card">
+            <img src="assets/images/lab-1.jpg" alt="LeviSens quantum optomechanics laboratory" loading="lazy" />
+          </figure>
+          <figure class="tech-card">
+            <img src="assets/images/lab-2.jpg" alt="Researcher aligning the levitated-sensor optical table" loading="lazy" />
+          </figure>
+        </div>
+
+        <div class="accordion">
+          <button class="accordion__trigger" aria-expanded="false" aria-controls="tech-detail">
+            <span>How it works</span>
+            <svg class="accordion__chevron" viewBox="0 0 24 24" width="22" height="22" aria-hidden="true">
+              <path d="M6 9l6 6 6-6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </button>
+          <div class="accordion__panel" id="tech-detail" hidden>
+            <p>
+              A focused laser traps a sub-micron particle in an optical potential
+              inside a high-vacuum chamber. By reading out the particle&rsquo;s
+              motion and feeding it back through the light field, we cool it to
+              ultra-low effective temperatures &mdash; turning a single levitated
+              mass into a near-ideal, calibration-stable transducer.
+            </p>
+            <ul class="feature-list">
+              <li>Contact-free, non-invasive probing</li>
+              <li>Quantum-limited force &amp; acceleration sensitivity</li>
+              <li>Compact, field-deployable architecture</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="section__cta">
+          <a href="connect.html" class="btn btn--primary">Work with us</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; <span class="year"></span> LeviSens. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
